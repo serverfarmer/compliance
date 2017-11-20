@@ -11,6 +11,7 @@ rm -f /opt/farm/* 2>/dev/null
 rm -f /opt/farm/.* 2>/dev/null
 rm -rf /opt/farm/.git \
 	/opt/farm/scripts/config \
+	/opt/farm/scripts/git \
 	/opt/farm/scripts/setup
 rm -f /opt/farm/scripts/init \
 	/opt/farm/scripts/functions.dialog \

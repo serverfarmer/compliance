@@ -16,6 +16,7 @@ rm -rf /opt/farm/.git \
 rm -f /opt/farm/scripts/init \
 	/opt/farm/scripts/functions.dialog \
 	/opt/farm/scripts/functions.install \
+	/opt/farm/scripts/functions.keys \
 	/opt/farm/scripts/functions.uid \
 	/opt/farm/ext/.gitignore
 

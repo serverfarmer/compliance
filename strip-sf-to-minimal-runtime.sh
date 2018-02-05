@@ -31,6 +31,8 @@ for EXT in `ls -1 /opt/farm/ext/`; do
 		rm -rf $EP/config $EP/service
 	elif [ "$EXT" = "firewall" ]; then
 		rm -rf $EP/generator
+	elif [ "$EXT" = "repos" ]; then
+		rm -rf $EP/lists $EP/templates $EP/install.sh
 	elif [ "$EXT" = "backup" ]; then
 		rm -f $EP/cron/push-to-collector.sh
 	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ]; then

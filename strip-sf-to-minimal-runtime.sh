@@ -11,13 +11,13 @@ rm -f /opt/farm/* 2>/dev/null
 rm -f /opt/farm/.* 2>/dev/null
 rm -rf /opt/farm/.git \
 	/opt/farm/scripts/config \
-	/opt/farm/scripts/git \
 	/opt/farm/scripts/setup
 rm -f /opt/farm/scripts/init \
 	/opt/farm/scripts/functions.dialog \
 	/opt/farm/scripts/functions.install \
 	/opt/farm/scripts/functions.keys \
 	/opt/farm/scripts/functions.uid \
+	/opt/farm/scripts/git/key.sh \
 	/opt/farm/ext/.gitignore
 
 sed -i -e "s/^#.*//" /opt/farm/scripts/functions.custom
@@ -37,6 +37,8 @@ for EXT in `ls -1 /opt/farm/ext/`; do
 		rm -rf $EP/lists $EP/templates $EP/install.sh
 	elif [ "$EXT" = "backup" ]; then
 		rm -f $EP/cron/push-to-collector.sh
+	elif [ "$EXT" = "app-deploy" ]; then
+		rm -rf $EP/app-install.sh
 	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ]; then
 		rm -rf $EP
 	fi

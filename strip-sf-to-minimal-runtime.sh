@@ -35,11 +35,13 @@ for EXT in `ls -1 /opt/farm/ext/`; do
 		rm -rf $EP/gpg
 	elif [ "$EXT" = "repos" ]; then
 		rm -rf $EP/lists $EP/templates $EP/install.sh
+	elif [ "$EXT" = "farm-roles" ]; then
+		rm -rf $EP/lists $EP/install.sh
 	elif [ "$EXT" = "backup" ]; then
 		rm -f $EP/cron/push-to-collector.sh
 	elif [ "$EXT" = "app-deploy" ]; then
 		rm -rf $EP/app-install.sh
-	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ] && [ "$EXT" != "storage-utils" ]; then
+	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ] && [ "$EXT" != "packages" ] && [ "$EXT" != "storage-utils" ]; then
 		rm -rf $EP
 	fi
 done

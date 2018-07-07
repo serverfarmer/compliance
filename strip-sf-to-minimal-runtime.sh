@@ -41,7 +41,9 @@ for EXT in `ls -1 /opt/farm/ext/`; do
 		rm -f $EP/cron/push-to-collector.sh
 	elif [ "$EXT" = "app-deploy" ]; then
 		rm -rf $EP/app-install.sh
-	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ] && [ "$EXT" != "packages" ] && [ "$EXT" != "storage-utils" ]; then
+	elif [ "$EXT" = "thermal-utils" ]; then
+		rm -rf $EP/support
+	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ] && [ "$EXT" != "ip-monitor" ] && [ "$EXT" != "packages" ] && [ "$EXT" != "db-utils" ] && [ "$EXT" != "net-utils" ] && [ "$EXT" != "storage-utils" ] && [ "$EXT" != "sms-smsapi" ]; then
 		rm -rf $EP
 	fi
 done

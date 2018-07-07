@@ -43,7 +43,7 @@ for EXT in `ls -1 /opt/farm/ext/`; do
 		rm -rf $EP/app-install.sh
 	elif [ "$EXT" = "thermal-utils" ]; then
 		rm -rf $EP/support
-	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ] && [ "$EXT" != "ip-monitor" ] && [ "$EXT" != "packages" ] && [ "$EXT" != "db-utils" ] && [ "$EXT" != "net-utils" ] && [ "$EXT" != "storage-utils" ] && [ "$EXT" != "sms-smsapi" ]; then
+	elif [ ! -d $EP/cron ] && [ "$EXT" != "ip-allocs" ] && [ "$EXT" != "packages" ] && [ "$EXT" != "db-utils" ] && [ "$EXT" != "net-utils" ] && [ "$EXT" != "storage-utils" ] && [ "$EXT" != "sms-smsapi" ]; then
 		rm -rf $EP
 	fi
 done

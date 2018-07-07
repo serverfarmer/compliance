@@ -33,10 +33,8 @@ for EXT in `ls -1 /opt/farm/ext/`; do
 		rm -rf $EP/generator
 	elif [ "$EXT" = "keys" ]; then
 		rm -rf $EP/gpg
-	elif [ "$EXT" = "repos" ]; then
-		rm -rf $EP/lists $EP/templates $EP/install.sh
-	elif [ "$EXT" = "farm-roles" ]; then
-		rm -rf $EP/lists $EP/install.sh
+	elif [ "$EXT" = "monitoring-space" ]; then
+		rm -rf $EP/config $EP/discover-directories.sh
 	elif [ "$EXT" = "backup" ]; then
 		rm -f $EP/cron/push-to-collector.sh
 	elif [ "$EXT" = "app-deploy" ]; then
